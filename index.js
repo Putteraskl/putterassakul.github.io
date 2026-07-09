@@ -59,13 +59,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Pattara Assakul | Finance & Private Equity</title>
+        <title>Putter Assakul | Finance & Private Equity</title>
         <meta
           name="description"
-          content="Pattara Assakul — finance student focused on private equity, investment banking, and real estate investment across the U.S. and Asia-Pacific."
+          content="Putter Assakul — finance student focused on private equity, investment banking, and real estate investment across the U.S. and Asia-Pacific."
         />
         <meta name="keywords" content="Pattara Assakul, Putter Assakul, finance, private equity, investment banking, NYU Stern" />
-        <meta property="og:title" content="Pattara Assakul | Finance & Private Equity" />
+        <meta property="og:title" content="Putter Assakul | Finance & Private Equity" />
         <meta property="og:description" content="Finance student focused on private equity, investment banking, and real estate investment." />
         <meta property="og:type" content="website" />
       </Head>
@@ -76,7 +76,7 @@ export default function Home() {
         <header className="fixed top-0 left-0 right-0 z-40">
           <div className="mx-auto max-w-7xl px-6 py-5">
             <div className="glass rounded-full px-5 py-3 flex items-center justify-between text-xs tracking-[0.18em] uppercase text-muted">
-              <a href="#" className="hover:text-gold transition">Pattara Assakul</a>
+              <a href="#" className="hover:text-gold transition">Putter Assakul</a>
               <nav className="hidden md:flex gap-7">
                 <a href="#experience" className="hover:text-gold transition">Experience</a>
                 <a href="#education" className="hover:text-gold transition">Education</a>
@@ -98,7 +98,7 @@ export default function Home() {
               </div>
 
               <h1 className="font-serif mt-8 text-[17vw] leading-[0.82] tracking-[-0.09em] md:text-[112px] lg:text-[132px]">
-                Pattara<br />Assakul
+                Putter<br />Assakul
               </h1>
 
               <p className="mt-8 max-w-2xl text-xl md:text-2xl leading-relaxed text-[#D9D0C2]">
@@ -240,7 +240,7 @@ export default function Home() {
                 <a href="https://www.linkedin.com/in/putterassakul" target="_blank" className="rounded-full border border-gold/50 bg-gold/10 px-6 py-3 text-sm hover:bg-gold/20 transition">
                   LinkedIn
                 </a>
-                <a href="mailto:putter@example.com" className="rounded-full border border-line bg-panel px-6 py-3 text-sm hover:border-gold/60 transition">
+                <a href="mailto:putterassakul@hotmail.com" className="rounded-full border border-line bg-panel px-6 py-3 text-sm hover:border-gold/60 transition">
                   <Mail className="inline mr-2 h-4 w-4" /> Email
                 </a>
               </div>
@@ -249,7 +249,7 @@ export default function Home() {
         </section>
 
         <footer className="mx-auto max-w-7xl px-6 py-10 text-sm text-muted border-t border-line">
-          © 2026 Pattara Assakul. Built with Next.js, Tailwind CSS, and Framer Motion.
+          © 2026 Putter Assakul. Built with Next.js, Tailwind CSS, and Framer Motion.
         </footer>
       </main>
     </>
