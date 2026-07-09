@@ -3,205 +3,430 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Putter Assakul | Finance</title>
-  <meta name="description" content="Putter Assakul is a finance student focused on private equity, investment banking, and real estate investment.">
-
+  <title>Pattara Assakul | Finance & Private Equity</title>
+  <meta name="description" content="Pattara Assakul — finance student focused on private equity, investment banking, and real estate investment across the U.S. and Asia-Pacific.">
+  <meta name="keywords" content="Pattara Assakul, Putter Assakul, finance, private equity, investment banking, real estate investment, NYU Stern">
+  <meta property="og:title" content="Pattara Assakul | Finance & Private Equity">
+  <meta property="og:description" content="Finance student focused on private equity, investment banking, and real estate investment.">
+  <meta property="og:type" content="website">
   <style>
+    :root {
+      --bg: #07080a;
+      --panel: #101318;
+      --text: #f3efe7;
+      --muted: #a9a195;
+      --line: #242932;
+      --gold: #c9ad69;
+      --soft: #171b22;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0d10;
-      color: #f4f1ea;
+      background:
+        radial-gradient(circle at top right, rgba(201,173,105,.12), transparent 32%),
+        linear-gradient(180deg, #07080a 0%, #0b0d11 100%);
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
     }
 
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 80px 24px;
+    .wrap {
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto;
     }
 
-    .nav {
+    header {
+      padding: 28px 0;
       display: flex;
       justify-content: space-between;
-      margin-bottom: 90px;
-      font-size: 14px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #b8b2a7;
-    }
-
-    .hero h1 {
-      font-size: 64px;
-      line-height: 1;
-      margin: 0 0 20px;
-      letter-spacing: -0.04em;
-    }
-
-    .hero p {
-      font-size: 22px;
-      line-height: 1.5;
-      max-width: 720px;
-      color: #c9c3b8;
-    }
-
-    .tag {
-      display: inline-block;
-      border: 1px solid #3a3f45;
-      padding: 8px 14px;
-      border-radius: 999px;
-      margin-bottom: 24px;
-      color: #d8c690;
+      align-items: center;
+      color: var(--muted);
       font-size: 13px;
-      letter-spacing: 0.08em;
+      letter-spacing: .12em;
       text-transform: uppercase;
+    }
+
+    nav a {
+      margin-left: 24px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    nav a:hover { color: var(--gold); }
+
+    .hero {
+      min-height: 78vh;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 56px;
+      align-items: center;
+      padding: 64px 0 96px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 14px;
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      background: rgba(16,19,24,.72);
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(56px, 8vw, 110px);
+      line-height: .92;
+      letter-spacing: -.06em;
+      margin: 28px 0 24px;
+      font-weight: 500;
+    }
+
+    .lead {
+      max-width: 760px;
+      font-size: clamp(19px, 2vw, 25px);
+      line-height: 1.5;
+      color: #d5cec2;
+      margin: 0 0 34px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--text);
+      text-decoration: none;
+      background: var(--panel);
+    }
+
+    .btn.primary {
+      border-color: rgba(201,173,105,.55);
+      color: #fff4d4;
+    }
+
+    .profile-card {
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 26px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.015));
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+
+    .photo {
+      height: 420px;
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(201,173,105,.18), rgba(255,255,255,.03)),
+        url("profile.jpg");
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(255,255,255,.07);
+    }
+
+    .photo.placeholder {
+      display: flex;
+      align-items: end;
+      padding: 24px;
+      background:
+        linear-gradient(135deg, rgba(201,173,105,.2), rgba(255,255,255,.04));
+    }
+
+    .photo.placeholder span {
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      background: rgba(7,8,10,.38);
+    }
+
+    .stat b {
+      display: block;
+      font-size: 20px;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
     }
 
     section {
-      margin-top: 90px;
-      border-top: 1px solid #252a30;
-      padding-top: 36px;
+      padding: 74px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 34px;
     }
 
     h2 {
-      font-size: 14px;
-      letter-spacing: 0.14em;
+      margin: 0;
+      color: var(--gold);
+      font-size: 13px;
       text-transform: uppercase;
-      color: #d8c690;
-      margin-bottom: 28px;
+      letter-spacing: .16em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 580px;
+      line-height: 1.6;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
     }
 
     .item {
-      margin-bottom: 28px;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 28px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      background: rgba(16,19,24,.58);
+    }
+
+    .date {
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
 
     .item h3 {
+      margin: 0 0 8px;
       font-size: 22px;
-      margin: 0 0 6px;
+      letter-spacing: -.02em;
     }
 
     .item p {
       margin: 0;
-      color: #b8b2a7;
-      line-height: 1.6;
+      color: var(--muted);
+      line-height: 1.65;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
     }
 
     .card {
-      border: 1px solid #252a30;
+      min-height: 138px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
       padding: 22px;
-      border-radius: 16px;
-      background: #101419;
-      color: #c9c3b8;
+      background: var(--soft);
     }
 
-    a {
-      color: #f4f1ea;
-      text-decoration: none;
-      border-bottom: 1px solid #d8c690;
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 14px;
     }
 
     footer {
-      margin-top: 100px;
-      color: #777;
+      padding: 48px 0 68px;
+      color: #756f66;
       font-size: 13px;
+      border-top: 1px solid var(--line);
     }
 
-    @media (max-width: 700px) {
-      .hero h1 {
-        font-size: 44px;
-      }
-      .hero p {
-        font-size: 18px;
-      }
-      .nav {
-        margin-bottom: 60px;
-      }
+    @media (max-width: 860px) {
+      header { align-items: flex-start; gap: 20px; }
+      nav a { margin-left: 12px; }
+      .hero { grid-template-columns: 1fr; padding-top: 34px; }
+      .photo { height: 340px; }
+      .item { grid-template-columns: 1fr; gap: 10px; }
+      .grid { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 14px; }
     }
   </style>
 </head>
 
 <body>
-  <main class="container">
-    <div class="nav">
-      <div>Putter Assakul</div>
-      <div>Finance · Private Equity · Real Estate</div>
-    </div>
+  <div class="wrap">
+    <header>
+      <div>Pattara Assakul</div>
+      <nav>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-    <section class="hero" style="border-top: none; padding-top: 0; margin-top: 0;">
-      <div class="tag">NYU Stern · Private Equity</div>
-      <h1>Putter Assakul</h1>
-      <p>
-        Finance student focused on private equity, investment banking,
-        and real estate investment across the U.S. and Asia-Pacific.
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/in/putterassakul">LinkedIn</a>
-      </p>
-    </section>
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Finance · Private Equity · Real Estate</div>
+          <h1>Pattara<br>Assakul</h1>
+          <p class="lead">
+            Finance student focused on private equity, investment banking,
+            and real estate investment across the U.S. and Asia-Pacific.
+          </p>
+          <div class="buttons">
+            <a class="btn primary" href="https://www.linkedin.com/in/putterassakul" target="_blank">LinkedIn</a>
+            <a class="btn" href="mailto:putter@example.com">Contact</a>
+          </div>
+        </div>
 
-    <section>
-      <h2>About</h2>
-      <p>
-        I am a finance student with interests in private equity, investment banking,
-        and real estate investment. My experience spans financial analysis,
-        valuation, investment research, and corporate finance, with a focus on
-        long-term value creation across global and Asia-Pacific markets.
-      </p>
-    </section>
+        <aside class="profile-card">
+          <div class="photo placeholder">
+            <span>Replace this block with <b>profile.jpg</b> for your headshot.</span>
+          </div>
+          <div class="stats">
+            <div class="stat"><b>NYU</b><span>Stern</span></div>
+            <div class="stat"><b>PE</b><span>Focus</span></div>
+            <div class="stat"><b>APAC</b><span>Markets</span></div>
+          </div>
+        </aside>
+      </section>
 
-    <section>
-      <h2>Experience</h2>
+      <section id="about">
+        <div class="section-head">
+          <h2>About</h2>
+          <p>
+            Built for a concise, polished online presence: finance-oriented,
+            understated, and suitable for recruiters, networking, and Google search.
+          </p>
+        </div>
+        <p class="lead">
+          I am a finance student with interests in private equity, investment banking,
+          and real estate investment. My experience spans financial analysis, valuation,
+          investment research, and corporate finance, with a focus on long-term value
+          creation across global and Asia-Pacific markets.
+        </p>
+      </section>
 
-      <div class="item">
-        <h3>Private Equity Summer Analyst · Blackstone</h3>
-        <p>May 2026 – Aug 2026 · Hong Kong SAR</p>
-      </div>
+      <section id="experience">
+        <div class="section-head">
+          <h2>Experience</h2>
+          <p>Selected finance and investment experience.</p>
+        </div>
 
-      <div class="item">
-        <h3>Investment Banking Summer Analyst · Goldman Sachs</h3>
-        <p>Jun 2025 – Aug 2025 · New York, United States</p>
-      </div>
+        <div class="timeline">
+          <div class="item">
+            <div class="date">May 2026 — Aug 2026</div>
+            <div>
+              <h3>Private Equity Summer Analyst · Blackstone</h3>
+              <p>Hong Kong SAR. Evaluated investment opportunities, supported due diligence, built valuation and LBO models, and prepared investment materials across Asia-Pacific markets.</p>
+            </div>
+          </div>
 
-      <div class="item">
-        <h3>Corporate Finance Intern · Ocean Property Co., Ltd.</h3>
-        <p>May 2024 – Aug 2024 · Bangkok, Thailand</p>
-      </div>
-    </section>
+          <div class="item">
+            <div class="date">Jun 2025 — Aug 2025</div>
+            <div>
+              <h3>Investment Banking Summer Analyst · Goldman Sachs</h3>
+              <p>New York, United States. Supported financial modeling, valuation analysis, market research, and presentation materials for transaction-related work.</p>
+            </div>
+          </div>
 
-    <section>
-      <h2>Education</h2>
+          <div class="item">
+            <div class="date">May 2024 — Aug 2024</div>
+            <div>
+              <h3>Corporate Finance Intern · Ocean Property Co., Ltd.</h3>
+              <p>Bangkok, Thailand. Assisted with commercial real estate analysis, investment returns, market research, and internal reporting.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div class="item">
-        <h3>NYU Stern School of Business</h3>
-        <p>Bachelor's Degree, Business · 2023 – 2027</p>
-      </div>
+      <section id="education">
+        <div class="section-head">
+          <h2>Education</h2>
+          <p>Academic background.</p>
+        </div>
 
-      <div class="item">
-        <h3>Phillips Exeter Academy</h3>
-        <p>High School Diploma · 2019 – 2023</p>
-      </div>
-    </section>
+        <div class="timeline">
+          <div class="item">
+            <div class="date">2023 — 2027</div>
+            <div>
+              <h3>NYU Stern School of Business</h3>
+              <p>Bachelor’s Degree in Business, concentration in Finance.</p>
+            </div>
+          </div>
 
-    <section>
-      <h2>Focus Areas</h2>
-      <div class="grid">
-        <div class="card">Private Equity</div>
-        <div class="card">Investment Banking</div>
-        <div class="card">Real Estate Finance</div>
-        <div class="card">M&A</div>
-        <div class="card">Valuation</div>
-        <div class="card">Asia-Pacific Investments</div>
-      </div>
-    </section>
+          <div class="item">
+            <div class="date">2019 — 2023</div>
+            <div>
+              <h3>Phillips Exeter Academy</h3>
+              <p>High School Diploma.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Focus Areas</h2>
+          <p>Professional interests and skill areas.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card"><h3>Private Equity</h3><p>Investment analysis, due diligence, LBO modeling, and value creation.</p></div>
+          <div class="card"><h3>Investment Banking</h3><p>M&A, valuation, market research, and client materials.</p></div>
+          <div class="card"><h3>Real Estate Finance</h3><p>Commercial real estate, underwriting, and long-term asset strategy.</p></div>
+          <div class="card"><h3>Valuation</h3><p>DCF, comparable companies, precedent transactions, and returns analysis.</p></div>
+          <div class="card"><h3>Asia-Pacific</h3><p>Investment opportunities across Thailand, Hong Kong, Singapore, and broader APAC.</p></div>
+          <div class="card"><h3>Long-Term Capital</h3><p>Business transformation, strategic growth, and institutional investing.</p></div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>
+            Connect on <a href="https://www.linkedin.com/in/putterassakul" target="_blank" style="color:var(--text)">LinkedIn</a>
+            or email <a href="mailto:putter@example.com" style="color:var(--text)">putter@example.com</a>.
+          </p>
+        </div>
+      </section>
+    </main>
 
     <footer>
-      © 2026 Putter Assakul
+      © 2026 Pattara Assakul. Built for GitHub Pages.
     </footer>
-  </main>
+  </div>
 </body>
 </html>
